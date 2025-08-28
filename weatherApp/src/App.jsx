@@ -39,7 +39,7 @@ const WeatherApp = () => {
     setIsLoading(true);
     setError('');
     try {
-      const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${cityName}`);
+      const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${cityName}`);
       const data = await res.json();
       if (data.error) {
         setWeatherData(null);
